@@ -64,8 +64,8 @@ def get_second_item(seq):
     return seq[1]
 
 # Sort the list by the second item 
-frequency_list = sorted(frequency.keys(), key=get_second_item)
+frequency_list = sorted(frequency.items(), key=get_second_item)
 
 # Print words:frequency
-for words in frequency_list:
-    print('Word: ' + str(words) + '  | Frequency: ' + str(frequency[words]) + str(frequency[words] * ' *'))
+for word, count in frequency_list:
+    print('Word: ' + str(word) + '  | Frequency: ' + str(count) + str(count * ' *'))
